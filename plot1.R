@@ -13,7 +13,6 @@ powerConsumption$Date <- as.Date(strptime(powerConsumption$Date, "%e/%m/%Y"))
 
 powerConsumption$Time <- ymd_hms(paste(powerConsumption$Date, powerConsumption$Time))
 
-# plot 1
 hist(powerConsumption$Global_active_power, col = "red",
      xlab = "Global Active Power (kilowatts)", main = "Global Active Power")
 dev.copy(png, "plot1.png", width = 480, height = 480, units = "px")
