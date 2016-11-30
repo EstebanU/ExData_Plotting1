@@ -12,7 +12,6 @@ powerConsumption$Date <- as.Date(strptime(powerConsumption$Date, "%e/%m/%Y"))
 # converts time variable to date/time class
 powerConsumption$Time <- ymd_hms(paste(powerConsumption$Date, powerConsumption$Time))
 
-# plot 2
 plot(powerConsumption$Time, powerConsumption$Global_active_power,
      ylab = "Global Active Power (kilowatts)", xlab = "", type = "l")
 dev.copy(png, "plot2.png", width = 480, height = 480, units = "px")
