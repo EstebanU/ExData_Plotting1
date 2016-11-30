@@ -10,7 +10,6 @@ powerConsumption <- read.table("household_power_consumption.txt", sep = ";",
 powerConsumption$Date <- as.Date(strptime(powerConsumption$Date, "%e/%m/%Y"))
 
 # converts time variable to date/time class
-
 powerConsumption$Time <- ymd_hms(paste(powerConsumption$Date, powerConsumption$Time))
 
 
