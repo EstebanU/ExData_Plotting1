@@ -13,7 +13,6 @@ powerConsumption$Date <- as.Date(strptime(powerConsumption$Date, "%e/%m/%Y"))
 powerConsumption$Time <- ymd_hms(paste(powerConsumption$Date, powerConsumption$Time))
 
 
-# plot 3
 with(powerConsumption, {
     plot(Time, Sub_metering_1, type = "l", xlab = "", ylab = "", ylim = c(0, 38))
     points(Time, Sub_metering_2, type = "l", col = "red", xlab = "", ylab = "", ylim = c(0, 38)) 
