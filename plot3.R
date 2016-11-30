@@ -15,7 +15,7 @@ powerConsumption$Time <- ymd_hms(paste(powerConsumption$Date, powerConsumption$T
 
 # plot 3
 with(powerConsumption, {
-    plot(Time, Sub_metering_1, type = "l", ylim = c(0, 38), xlab = "", ylab = "")
+    plot(Time, Sub_metering_1, type = "l", xlab = "", ylab = "", ylim = c(0, 38))
     points(Time, Sub_metering_2, type = "l", col = "red", xlab = "", ylab = "", ylim = c(0, 38)) 
     points(Time, Sub_metering_3, type = "l", col = "blue", xlab = "", ylab = "", ylim = c(0, 38))
 })
